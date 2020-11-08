@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application','main','media-qiueres', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+  <header>
+        <div class="flex-column">
+            <div class="logo-container flex-column">
+                <img class="logo" src="assets/food-logo.jpg" />
+                <h3>Maisto Kelionės</h3>
+            </div>
+            
+            <div class="navigation-container flex-column">
+                    <a href="index" class="menu-item">Pagrindinis</a>
+                    <a href="order" class="menu-item">Užsisakykite</a>
+                    <a href="duk" class="menu-item">D.U.K</a>
+                    <a href="contact" class="menu-item">Kontaktai</a>
+            </div>
+        </div>
+       <div class="image-banner">
+            <img src="assets/food-banner.jpg" class="image" />
+       </div>
+    </header>
+  
+    <%= yield %>
+
+        <footer>
+        <div class="flex-container">
+               <p class="footer-text">Maisto Kelionės © 2018-2020</p>
+        </div> 
+    </footer>
+  </body>
+</html>
