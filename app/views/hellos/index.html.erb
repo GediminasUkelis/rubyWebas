@@ -1,0 +1,25 @@
+
+ <%= link_to "Sukurti picą", new_hello_path%>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
+<% @hellos.each do |hello| %>
+
+<tr>
+<td><%= hello.name%></td>
+<td><%= hello.description%></td>
+<td><%= hello.price%></td>
+<td>
+    <%= link_to "Edit", edit_hello_path(hello)%>
+</td>
+<td>
+    <%= link_to "Delete", hello, method: :delete, data: {confirm: "are you sure you want to del?"} %>
+</td>
+</tr>
+<% end %>
+</table>

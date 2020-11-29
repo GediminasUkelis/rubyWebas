@@ -6,4 +6,4 @@ class HomeController < ApplicationController
     def duk
     end
   end
-  
+
