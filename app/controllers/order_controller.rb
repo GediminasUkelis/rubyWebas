@@ -1,12 +1,9 @@
+# frozen_string_literal: true
+
 class OrderController < ApplicationController
+  def order; end
 
-    def order
-    end
+  def new; end
 
-    def new
-    end
-
-    def create
-    end
-  end
-  
+  def create; end
+end
